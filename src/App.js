@@ -1,13 +1,18 @@
 import React from "react";
+import Reviews from "./components/reviews";
+import Card from "./components/card";
+import SecondCard from "./components/infoCard";
+
 
 export default function App() {
   return (
     <div className="font-body">
       <Header />
-      <Welcome />
+      
       <Platform />
-      <Card />
-      <SecondCard />
+      <Card/>
+      <SecondCard/>
+      <Reviews/>
     </div>
   );
 }
@@ -37,32 +42,7 @@ function Header() {
   );
 }
 
-function Welcome() {
-  return (
-    <section className="pl-6 pr-6 mb-28 ">
-      <div className="grid grid-cols-2 gap-4  w-full h-full ">
-        {" "}
-        <div>
-          <div className="w-full h-full  flex flex-col gap-6">
-            <p className="text-5xl  font-extrabold capitalize  text-black leading-tight">
-              welcome 👋 <br></br> to the ticket admin <br></br> page
-            </p>
-            <p className="text-xl font-thin capitalize leading-snug  ">
-              You're about to go backstage! Here, you become an admin to create
-              and manage your events
-            </p>
-            <button className="w-1/2 h-14 bg-orange-600 rounded-md shadow-md text-center text-lg  text-white font-semibold capitalize hover:bg-orange-500 hover:text-gray-200  ">
-              create event
-            </button>
-          </div>
-        </div>
-        <div className="shadow-md shadow-black ">
-          <img src="/image/dashboard-light.webp" alt="dashboardimage"></img>
-        </div>
-      </div>
-    </section>
-  );
-}
+
 
 function Platform() {
   return (
@@ -90,201 +70,8 @@ function Platform() {
   );
 }
 
-function Card() {
-  return (
-    <section className="pl-6 pr-6 mb-24 ">
-      <div className="grid grid-cols-3  gap-4 w-full h-[35vh]  ">
-        <div className=" w-[90] shadow-sm rounded-xl shadow-black h-full">
-          <div className="">
-            <p className="font-extrabold text-3xl capitalize p-3">01</p>
-          </div>
-          <div className="flex flex-col gap-2 justify-center items-center w-full h-full ">
-            <di>
-              <img src="" alt=""></img>
-            </di>
-            <div className="text-center ">
-              <p className="font-extrabold capitalize leading-relaxed text-4xl ">
-                Event Analytics
-              </p>
-              <p className="text-sm font-thin leading-relaxed ">
-                Keeping track of your revenue and attendance has never been
-                easier
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className=" shadow-sm rounded-md shadow-black  h-full ">
-          <div>
-            <p className="font-extrabold text-3xl capitalize p-3 ">02</p>
-          </div>
-          <div className="flex flex-col gap-2 justify-center items-center w-full h-full ">
-            <di>
-              <img src="" alt=""></img>
-            </di>
-            <div className="text-center">
-              <p className="font-extrabold capitalize leading-relaxed text-4xl ">
-                Assigned Event URL
-              </p>
-              <p className="text-sm font-thin leading-relaxed ">
-                Promote and share your events easily with your very own event
-                URL
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className=" shadow-sm rounded-md shadow-black  h-full ">
-          <div>
-            <p className="font-extrabold text-3xl capitalize p-3 ">03</p>
-          </div>
-          <div className="flex flex-col gap-2 justify-center items-center w-full h-full ">
-            <di>
-              <img src="" alt=""></img>
-            </di>
-            <div className="text-center">
-              <p className="font-extrabold capitalize leading-relaxed text-4xl ">
-                Ticket QR Code
-              </p>
-              <p className="text-sm font-thin leading-relaxed ">
-                Guaranteed safe and easy identification of tickets sold
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
-function SecondCard() {
-  return (
-    <section className="pl-6 pr-6 mb-20 ">
-      <div className="grid grid-cols-2 gap-10  w-full h-[60vh]">
-        <div className=" w-[40vw]">
-          <p className="text-orange-500 font-medium text-xl capitalize leading-relaxed ">
-            why choose us{" "}
-          </p>
 
-          <p className="font-extrabold capitalize leading-relaxed text-4xl">
-            Diverse Currency
-          </p>
 
-          <p className="text-lg font-thin leading-relaxed mb-6 ">
-            Hosts now have the ability to choose what region their events will
-            be taking place. This feature automatically sets the ticket prices
-            to the corresponding currency.
-          </p>
-          {/* rememeber horizontal line */}
-          <div className="flex gap-4 flex-col  h-full w-full">
-            <div className="flex gap-4 ">
-              <img className="w-6 " src="/image/check.png" alt=""></img>
-              <p className="capitalize font-thin text-base ">naira</p>
-            </div>
-            <div className="flex gap-4 ">
-              <img className="w-6 " src="/image/check.png" alt=""></img>
-              <p className="capitalize font-thin text-base ">cedis</p>
-            </div>
-          </div>
-        </div>
 
-        {/* image  */}
-        <div className="place-items-center w-full">
-          <img
-            className="w-[70vw] h-[50vh]"
-            src="/image/country-light.webp"
-            alt=""
-          ></img>
-        </div>
-      </div>
 
-      {/* second */}
-
-      <div className="grid justify-between grid-cols-2 gap-6  w-full h-[60vh]">
-        <div className="  order-2 ">
-          <p className="text-orange-500 font-medium text-xl capitalize leading-relaxed ">
-            why choose us{" "}
-          </p>
-          <p className="font-extrabold capitalize leading-relaxed text-4xl">
-            Featured Events
-          </p>
-          <p className="text-lg font-thin leading-relaxed mb-6 ">
-            Enjoy top tier management features to ensure a trouble free
-            ticketing experience.
-          </p>
-          {/* rememeber horizontal line */}
-          <div className="flex gap-4 flex-col  h-full w-full">
-            <div className="flex gap-4 ">
-              <img className="w-6 " src="/image/check.png" alt=""></img>
-              <p className="capitalize font-thin text-base ">Export Data</p>
-            </div>
-            <div className="flex gap-4 ">
-              <img className="w-6 " src="/image/check.png" alt=""></img>
-              <p className="capitalize font-thin text-base ">event media</p>
-            </div>
-            <div className="flex gap-4 ">
-              <img className="w-6 " src="/image/check.png" alt=""></img>
-              <p className="capitalize font-thin text-base ">
-                Recurring events
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* image  */}
-        <div className="place-items-center w-full order-1">
-          <img
-            className="w-[40vw] h-[50vh]"
-            src="/image/export-light.webp"
-            alt=""
-          ></img>
-        </div>
-      </div>
-
-      {/* third  */}
-
-      <div className="grid justify-between grid-cols-2 gap-6  w-full h-[60vh]">
-        <div className=" w-[40vw] ">
-          <p className="text-orange-500 font-medium text-xl capitalize leading-relaxed ">
-            why choose us{" "}
-          </p>
-          <p className="font-extrabold capitalize leading-relaxed text-4xl">
-            Event Promotion
-          </p>
-          <p className="text-lg font-thin leading-relaxed mb-6 ">
-            Events are promoted on the site through discover events and business
-            strategies.
-          </p>
-          {/* rememeber horizontal line */}
-          <div className="flex gap-4 flex-col  h-full w-full">
-            <div className="flex gap-4 ">
-              <img className="w-6 " src="/image/check.png" alt=""></img>
-              <p className="capitalize font-thin text-base ">Email marketing</p>
-            </div>
-            <div className="flex gap-4 ">
-              <img className="w-6 " src="/image/check.png" alt=""></img>
-              <p className="capitalize font-thin text-base ">
-                Onsite ticketing services
-              </p>
-            </div>
-            <div className="flex gap-4 ">
-              <img className="w-6 " src="/image/check.png" alt=""></img>
-              <p className="capitalize font-thin text-base ">Media Coverage</p>
-            </div>
-          </div>
-        </div>
-
-        {/* image  */}
-        <div className="place-items-center w-full">
-          <img
-            className="w-[70vw] h-[50vh]"
-            src="/image/revenue-light.webp"
-            alt=""
-          ></img>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Review (){
-
-}
