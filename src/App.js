@@ -2,17 +2,20 @@ import React from "react";
 import Reviews from "./components/reviews";
 import Card from "./components/card";
 import SecondCard from "./components/infoCard";
+import Welcome from "./components/welcome";
+import Footer from "./components/footer";
 
 
 export default function App() {
   return (
     <div className="font-body">
       <Header />
-      
+      <Welcome/>
       <Platform />
       <Card/>
       <SecondCard/>
       <Reviews/>
+      <Footer/>
     </div>
   );
 }
