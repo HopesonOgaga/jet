@@ -5,6 +5,7 @@ import SecondCard from "./components/infoCard";
 import Welcome from "./components/welcome";
 import Footer from "./components/footer";
 import Login from "./components/login";
+import SignUP from "./components/signup";
 
 
 export default function App() {
@@ -17,7 +18,7 @@ export default function App() {
       <SecondCard/>
       <Reviews/>
       <Footer/> */}
-      <Login/>
+      <SignUP/>
     </div>
   );
 }
