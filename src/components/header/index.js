@@ -1,7 +1,7 @@
 import React from "react";
 export default function Header() {
     return (
-      <section className="flex justify-between  pl-10 pr-10  shadow-sm h-16 py-3 mb-20 ">
+      <section className="flex justify-between  pl-10 pr-10  shadow-sm h-16 py-3  ">
         <div className=" ">
           <img
             className="w-32  "

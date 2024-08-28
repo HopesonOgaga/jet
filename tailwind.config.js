@@ -1,13 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [  "./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      fontFamily:{
-        body : [ "Roboto", "sans-serif"]
-      }
+      fontFamily: {
+        body: ["Roboto", "sans-serif"],
+      },
+    },
+
+    backgroundImage: {
+      login: "url('/public/image/loginback.png')",
     },
   },
   plugins: [],
-}
-
+};
