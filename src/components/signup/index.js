@@ -1,47 +1,118 @@
 import React from "react";
+import Header from "../header";
+import Footer from "../footer";
 
 export default function SignUP() {
-  return <section>
-    <div>
-        {/* <img src="/register.jpg" alt="register"></img> */}
-    </div>
-    <div>
-        <div>
+  return (
+    <section>
+      <Header />
+      <div className="grid grid-cols-3 w-full h-full ">
+        <div className="w-full h-full">
+          <img className="w-full" src="/register.jpg" alt="register"></img>
+        </div>
+        <div className="col-span-2 ">
+          <div>
             <p>sign up</p>
             <p>please fill your form</p>
-        </div>
-        <div>
-          <form>
-            <div>
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
-                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
-            </div>
-            <div>
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
-                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
-            </div>
-            <section>
-            <div>
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
-                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
-            </div>
-            <div>
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
-                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
-            </div>
-            </section>
-            <div>
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
-                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
-            </div>
-            <div>
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
-                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
-            </div>
-            <section>
-              <button>create account</button>
-            </section>
-            <div className="flex justify-between w-full mt-6">
+          </div>
+          <div>
+            <form>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 "
+                >
+                  Your email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                  placeholder="name@flowbite.com"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 "
+                >
+                  Your email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                  placeholder="name@flowbite.com"
+                  required
+                />
+              </div>
+              <section className="flex gap-6 ">
+                <div>
+                  <label
+                    for="email"
+                    class="block mb-2 text-sm font-medium text-gray-900 "
+                  >
+                    Your email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    placeholder="name@flowbite.com"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block mb-2 text-sm font-medium text-gray-900 "
+                  >
+                    Your email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    placeholder="name@flowbite.com"
+                    required
+                  />
+                </div>
+              </section>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 "
+                >
+                  Your email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                  placeholder="name@flowbite.com"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 "
+                >
+                  Your email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                  placeholder="name@flowbite.com"
+                  required
+                />
+              </div>
+              <section>
+                <button>create account</button>
+              </section>
+              <div className="flex justify-between w-full mt-6">
                 <p>Don't have an account?</p>
                 <a
                   href="#"
@@ -76,8 +147,11 @@ export default function SignUP() {
                   </a>
                 </div>
               </div>
-          </form>
+            </form>
+          </div>
         </div>
-    </div>
-  </section>;
+      </div>
+      <Footer />
+    </section>
+  );
 }
