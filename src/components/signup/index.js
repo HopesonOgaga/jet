@@ -1,8 +1,15 @@
-import React from "react";
+import { useState } from "react";
 import Header from "../header";
 import Footer from "../footer";
 
 export default function SignUp() {
+  // state
+  const [name, setName] = useState("");
+  const [host, hostName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [number, setNumber] = useState("");
   return (
     <section>
       <Header />
@@ -12,7 +19,10 @@ export default function SignUp() {
         </div>
         <div className="col-span-1 w-full h-full">
           <div className="place-items-end w-full h-full justify-end pl-6 pr-6">
-            <form className="flex flex-col gap-2 h-full">
+            <form
+              className="flex flex-col gap-2 h-full "
+              onSubmit={registrationSubmit}
+            >
               <div className="flex gap-1 flex-col mb-6">
                 <p className="font-bold text-2xl capitalize">Sign Up</p>
                 <p>Please fill your form</p>
@@ -29,6 +39,8 @@ export default function SignUp() {
                   id="name"
                   className="border border-none border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-5/6 h-14 p-2.5 bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white hover:border-orange-500 hover:ring-orange-500 hover:ring-2"
                   required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div>
@@ -41,8 +53,10 @@ export default function SignUp() {
                 <input
                   type="text"
                   id="hostname"
-                  className="border border-none border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-5/6 h-14 p-2.5 bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white hover:border-orange-500 hover:ring-orange-500 hover:ring-2"
+                  className="border border-none border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-5/6 h-14 p-2.5 bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400  hover:border-orange-500 hover:ring-orange-500 hover:ring-2"
                   required
+                  value={host}
+                  onChange={(e) => hostName(e.target.value)}
                 />
               </div>
               <section className="flex gap-3 w-full">
@@ -59,6 +73,8 @@ export default function SignUp() {
                     className="border border-none border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-5/6 h-12 p-2.5 bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white hover:border-orange-500 hover:ring-orange-500 hover:ring-2"
                     placeholder="name@flowbite.com"
                     required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="w-full">
@@ -73,6 +89,8 @@ export default function SignUp() {
                     id="phoneNumber"
                     className="border border-none border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-5/6 h-12 p-2.5 bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white hover:border-orange-500 hover:ring-orange-500 hover:ring-2"
                     required
+                    value={number}
+                    onChange={(e) => setNumber(e.target.value)}
                   />
                 </div>
               </section>
@@ -86,8 +104,10 @@ export default function SignUp() {
                 <input
                   type="password"
                   id="password"
-                  className="border border-none border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-5/6 h-14 p-2.5 bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white hover:border-orange-500 hover:ring-orange-500 hover:ring-2"
+                  className="border border-none border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-5/6 h-14 p-2.5 bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400  hover:border-orange-500 hover:ring-orange-500 hover:ring-2"
                   required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <div>
@@ -100,8 +120,10 @@ export default function SignUp() {
                 <input
                   type="password"
                   id="confirmPassword"
-                  className="border border-none border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-5/6 h-14 p-2.5 bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white hover:border-orange-500 hover:ring-orange-500 hover:ring-2"
+                  className="border border-none border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-5/6 h-14 p-2.5 bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400  hover:border-orange-500 hover:ring-orange-500 hover:ring-2"
                   required
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                 />
               </div>
               <section className="flex justify-between">
@@ -157,11 +179,7 @@ export default function SignUp() {
                 </div>
                 <div className="w-8 h-8 border-white border-2 rounded-full flex items-center justify-center">
                   <a href="#" target="_blank">
-                    <img
-                      className="w-6 h-6"
-                      src="/twitter.png"
-                      alt="Twitter"
-                    />
+                    <img className="w-6 h-6" src="/twitter.png" alt="Twitter" />
                   </a>
                 </div>
               </div>
@@ -172,4 +190,23 @@ export default function SignUp() {
       <Footer />
     </section>
   );
+
+  function registrationSubmit(e) {
+    e.preventDefault();
+    const registrationInfo = {
+      name,
+      host,
+      number,
+      email,
+      password,
+      confirmPassword,
+    };
+    setName("");
+    hostName("");
+    setNumber("");
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
+    console.log(registrationInfo);
+  }
 }
