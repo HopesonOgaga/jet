@@ -1,18 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../header";
 import Footer from "../footer";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
   return (
     <section>
       <Header className="mb-0" />
       <div className="grid grid-cols-2  h-screen justify-evenly">
         <div className="col-span-1 w-full">
-          <img
-            className="h-full w-full"
-            src="/image/login.jpg"
-            alt="Login"
-          />
+          <img className="h-full w-full" src="/image/login.jpg" alt="Login" />
         </div>
         <div className="col-span-1 w-full h-full p-6 place-content-center">
           <div className="flex gap-1 flex-col mb-6">
@@ -20,15 +18,23 @@ export default function Login() {
             <p>Please fill in your information below</p>
           </div>
           <div>
-            <form className="flex flex-col gap-6 w-full h-full">
+            <form
+              className="flex flex-col gap-6 w-full h-full"
+              onSubmit={handleSubmit}
+            >
               <div>
-                <label htmlFor="email" className="block mb-2 text-gray-900 capitalize">
+                <label
+                  htmlFor="email"
+                  className="block mb-2 text-gray-900 capitalize"
+                >
                   Your email
                 </label>
                 <input
                   type="email"
                   name="email"
                   id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="border border-none border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-5/6 h-14 p-2.5 bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white hover:border-orange-500 hover:ring-orange-500 hover:ring-2"
                   placeholder="name@company.com"
                   required
@@ -45,7 +51,9 @@ export default function Login() {
                   type="password"
                   name="password"
                   id="password"
-                  className="border border-none border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-5/6 h-14 p-2.5 bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white hover:border-orange-500 hover:ring-orange-500 hover:ring-2"
+                  value={Password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="border border-none border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-5/6 h-14 p-2.5 bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400  hover:border-orange-500 hover:ring-orange-500 hover:ring-2"
                   required
                 />
               </div>
@@ -70,12 +78,20 @@ export default function Login() {
               <div className="flex gap-4 w-full h-full mt-12">
                 <div className="w-8 h-8 border-white border-2 rounded-full flex items-center justify-center">
                   <a href="#" target="_blank">
-                    <img className="w-6 h-6" src="/instagram.png" alt="Instagram" />
+                    <img
+                      className="w-6 h-6"
+                      src="/instagram.png"
+                      alt="Instagram"
+                    />
                   </a>
                 </div>
                 <div className="w-8 h-8 border-white border-2 rounded-full flex items-center justify-center">
                   <a href="#" target="_blank">
-                    <img className="w-6 h-6" src="/facebook.png" alt="Facebook" />
+                    <img
+                      className="w-6 h-6"
+                      src="/facebook.png"
+                      alt="Facebook"
+                    />
                   </a>
                 </div>
                 <div className="w-8 h-8 border-white border-2 rounded-full flex items-center justify-center">
@@ -93,4 +109,16 @@ export default function Login() {
       </div>
     </section>
   );
+  function handleSubmit(e) {
+    e.preventDefault();
+    const new_info = {
+      email,
+      Password,
+    };
+
+    console.log(new_info);
+
+    setEmail("");
+    setPassword("");
+  }
 }
